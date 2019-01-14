@@ -32,7 +32,7 @@ main()
 			random[i] = x;
 			for (int j = -1; j < i; j++)
 			{
-				if (random[i] == random[j]) //bir öncekileRle aynı olmamalı
+				if (random[i] == random[j]) //bir Ã¶ncekileRle aynÄ± olmamalÄ±
 				{
 					i--;
 					break;
@@ -52,10 +52,10 @@ main()
 		}
 		int sayac = 0;
 		printf("Masanin Kartlari: %s\t XX", card[random[sayac]]); sayac = sayac + 2; masatoplam = deger[sayac - 1] + deger[sayac-2];
-		if (deger[sayac - 1] == 1 || deger[sayac - 2] == 1)masatoplam += 10;//Masa As çekerse
+		if (deger[sayac - 1] == 1 || deger[sayac - 2] == 1)masatoplam += 10;//Masa As Ã§ekerse
 		printf("\nOyuncunun Kartlari: %s\t%s", card[random[sayac]], card[random[sayac + 1]]);
 		sayac++; oyuncutoplam = deger[sayac] + deger[sayac - 1];
-		if (deger[sayac] == 1 || deger[sayac - 1] == 1)//Oyuncu As çekerse
+		if (deger[sayac] == 1 || deger[sayac - 1] == 1)//Oyuncu As Ã§ekerse
 		{
 			while (1) {
 				printf("\nAs cektiniz 11 olarak kullanmak ister misiniz ?  Evet(e) Hayir(h)");
@@ -80,7 +80,7 @@ main()
 			scanf_s(" %c", &soru);
 			if (soru == 'e') {
 				sayac++; oyuncutoplam += deger[sayac];
-				if (deger[sayac] == 1 && oyuncutoplam < 12) {//Oyuncu as çekerse ve elinin toplamı 12 den küçükse
+				if (deger[sayac] == 1 && oyuncutoplam < 12) {//Oyuncu as Ã§ekerse ve elinin toplamÄ± 12 den kÃ¼Ã§Ã¼kse
 					while (1) {
 						printf("\nAs cektiniz 11 olarak kullanmak ister misiniz ?  Evet(e) Hayir(h)");
 						scanf_s(" %c", &assoru);
@@ -103,13 +103,13 @@ main()
 			else {
 				printf("Yanlis bir karakter girdiniz");
 			}
-			if (oyuncutoplam > 21) {//Oyuncu 21 i geçerse kart çekme döngüsünü sonlandırıyor
+			if (oyuncutoplam > 21) {//Oyuncu 21 i geÃ§erse kart Ã§ekme dÃ¶ngÃ¼sÃ¼nÃ¼ sonlandÄ±rÄ±yor
 				break;
 			}
 
 		
 		}
-		if (oyuncutoplam > 21) {// Oyuncu 21 i geçerse kaybeder masa kart çekmeden oyun sonlanır oyuncuya tekrar oynamak istiyor musun diye sorulur
+		if (oyuncutoplam > 21) {// Oyuncu 21 i geÃ§erse kaybeder masa kart Ã§ekmeden oyun sonlanÄ±r oyuncuya tekrar oynamak istiyor musun diye sorulur
 			printf("\n\t\t\t\t\tKAYBETTINIZ");
 			kaybetme++;
 			printf("\nTekrar oynamak istiyor musunuz ? Evet (e) Hayir (h)");
@@ -119,12 +119,12 @@ main()
 			else
 				continue;
 		}
-			printf("Masanin Kartlari:%s\t%s", card[random[0]], card[random[1]]);//Masanın 17 den büyük olduğu durumlarda da elindekileri yazması için döngü dışında
+			printf("Masanin Kartlari:%s\t%s", card[random[0]], card[random[1]]);//MasanÄ±n 17 den bÃ¼yÃ¼k olduÄŸu durumlarda da elindekileri yazmasÄ± iÃ§in dÃ¶ngÃ¼ dÄ±ÅŸÄ±nda
 			
 			while (masatoplam < 17) {
 					sayac++;
 					masatoplam += deger[sayac];
-					if (deger[sayac] == 1 && masatoplam < 12)masatoplam += 10;//Masa as çekerse
+					if (deger[sayac] == 1 && masatoplam < 12)masatoplam += 10;//Masa as Ã§ekerse
 					printf("\t%s", card[random[sayac]]);
 				}
 			printf("\nMasanin Toplami:%d", masatoplam);
@@ -132,7 +132,7 @@ main()
 			
 
 		
-		if (masatoplam > 21) {//Masa 21 i geçerse oyuncu kazanır
+		if (masatoplam > 21) {//Masa 21 i geÃ§erse oyuncu kazanÄ±r
 			printf("\n\t\t\t\t\tKAZANDINIZ"); kazanma++;
 		}
 		else if (masatoplam < oyuncutoplam) {
